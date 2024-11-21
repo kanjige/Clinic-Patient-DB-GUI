@@ -35,8 +35,51 @@
 
     <main>
        <section>
-            <h3>Welcome to PatientLink</h3>
+            <h3>Create Tables</h3>
+            <hr>
         </section>
+        <hr>
+
+        <section>
+            <h3>Drop Table</h3>
+            <hr>
+        </section>
+        <hr>
+
+        <section>
+            <h3>Populate Table</h3>
+            <hr>
+        </section>
+        <hr>
+        
+
+        <section>
+            <h3>Update Record</h3>
+            <hr>
+        </section>
+        <hr>
+
+        <section>
+            <h3>Delete Record</h3>
+            <hr>
+        </section>
+        <hr>
+
+        <section>
+            <h3>Search Records</h3>
+            <hr>
+        </section>
+        <hr>
+
+        <section>
+            <h3>Query</h3>
+            <hr>
+        </section>
+        <hr>
+
     </main>
+
+
+
 </body>
 </html>
