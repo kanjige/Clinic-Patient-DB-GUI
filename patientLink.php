@@ -36,44 +36,46 @@
     <main>
        <section>
             <h3>Create Tables</h3>
-            <hr>
+            <input type="submit" value="Create Default Tables">
+            <input type="submit" value="Create New Tables">
         </section>
         <hr>
 
         <section>
             <h3>Drop Table</h3>
-            <hr>
+            <input type="submit" value="Drop Table">
         </section>
         <hr>
 
         <section>
-            <h3>Populate Table</h3>
-            <hr>
+            <h3>Add Record</h3>
+            <input type="submit" value="Add Default Records">
+            <input type="submit" value="Add Custom Record">
         </section>
         <hr>
         
 
         <section>
             <h3>Update Record</h3>
-            <hr>
+            <input type="submit" value="Update Record">
         </section>
         <hr>
 
         <section>
             <h3>Delete Record</h3>
-            <hr>
+            <input type="submit" value="Delete Record">
         </section>
         <hr>
 
         <section>
             <h3>Search Records</h3>
-            <hr>
+            <input type="submit" value="Search Records">
         </section>
         <hr>
 
         <section>
             <h3>Query</h3>
-            <hr>
+            <input type="submit" value="Query">
         </section>
         <hr>
 
