@@ -1,0 +1,56 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  
+  h2 {
+      font-size: 40px;
+      font-family: "Assistant", serif;
+      color: #BA5624;
+  }
+  
+  h1 {
+      font-family: "Assistant", serif;
+      color: #381D2A;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  h3 {
+      padding: 0px 30px 0px 30px;
+      font-family: "Assistant", serif;
+      color: #381D2A;
+  }
+  
+  p,label {
+      padding: 0px 30px 0px 30px;
+      font-family: "Assistant", serif;
+      color: #381D2A;
+  }
+  
+  h4 {
+      padding: 0px 30px 0px 30px;
+      font-family: "Assistant", serif;
+      color: #BA5624;
+  }
+  
+  footer {
+      font-family: "Assistant", serif;
+      color: #381D2A;
+      display: table-row;
+      font-size: 12px;
+  }
+  
+  body 
+  {
+      background-image: url("dot-grid.jpeg");
+      text-align: center;
+  }
+  
+  form
+  {
+      padding: 0px 30px 0px 30px;
+  }
+  
