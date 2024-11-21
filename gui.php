@@ -21,8 +21,19 @@ if (!$conn) {
     echo "Connection successful!";
 }
 
-// Close the connection when done
-oci_close($conn);
+// from sample sheet
+$query = "Select *From test" ;
+$stid = oci_parse($conn, $query);
+$r = oci_execute($stid);
+if($r){
+ // Fetch each row in an associative array
+    while ($row = oci_fetch_array($stid, OCI_RETURN_NULLS+OCI_ASSOC)) {
+    foreach ($row as $item) {
+    echo $item," ";
+    }
+    echo "<br/>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
