@@ -5,42 +5,23 @@
     width: 100%;
   }
   
-  h2 {
-      font-size: 40px;
+  h1,h2 {
       font-family: "Assistant", serif;
-      color: #BA5624;
-  }
-  
-  h1 {
-      font-family: "Assistant", serif;
-      color: #381D2A;
+      color: #2E6171;
       font-weight: bold;
       text-align: center;
   }
   
-  h3 {
+  h3,h4 {
       padding: 0px 30px 0px 30px;
       font-family: "Assistant", serif;
-      color: #381D2A;
+      color: #00747A;
   }
   
-  p,label {
+  p {
       padding: 0px 30px 0px 30px;
       font-family: "Assistant", serif;
-      color: #381D2A;
-  }
-  
-  h4 {
-      padding: 0px 30px 0px 30px;
-      font-family: "Assistant", serif;
-      color: #BA5624;
-  }
-  
-  footer {
-      font-family: "Assistant", serif;
-      color: #381D2A;
-      display: table-row;
-      font-size: 12px;
+      color: #232223;
   }
   
   body 
