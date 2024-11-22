@@ -19,11 +19,13 @@ $drop = [
 ];
 
 foreach ($drop as $query) {
-    if (mysqli_query($conn, $query)) {
-        echo "Table " . $query . "dropped.";
+    $stmt = oci_parse($conn, $query); // Prepare the SQL statement
+    if (oci_execute($stmt)) {
+        echo "Table dropped successfully: $query<br>";
     } else {
-        echo "Error dropping". mysqli_error($conn) ;
+        $error = oci_error($stmt);
+        echo "Error dropping table: " . $error['message'] . "<br>";
     }
 }
 
-mysqli_close($conn);
+oci_close($conn); // Close the Oracle connection
