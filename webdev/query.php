@@ -95,9 +95,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         INNER JOIN Billing_History ON Billing_Information.BillsID=Billing_History.BillsID
                         WHERE Billing_History.OutstandingPayment = 0);"
         ];
+
+
+
     }
 }
 
 // Close connection
-$conn->close();
+mysqli_close($conn);
 ?>
