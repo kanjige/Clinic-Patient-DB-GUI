@@ -1,6 +1,11 @@
 <?php include ('login.php'); ?>
 
-<div style="color:#14888E; text-align:center;">
+<br>
+<h3 style="text-align: center; color: black max-width: 70%; margin: auto;">log:</h3>
+<br>
+
+<div style="border-style: solid; border-width: 1px; border-color: black; overflow: auto; padding: 10px; font-size: 12px;">
+
 
 <?php
 
@@ -53,6 +58,17 @@ $tables = [
 	PATIENTID CHAR(16 BYTE), 
 	RELATION VARCHAR2(50 BYTE), 
 	PRIORITY VARCHAR2(3 BYTE)
+   )",
+
+"IMMUNIZATION_INFORMATION" => "CREATE TABLE IMMUNIZATION_INFORMATION(	
+    IMMUNIZATIONSID CHAR(10 BYTE),
+	VACCINENAME VARCHAR2(255 BYTE),
+	VACCINEMANUFACTURER VARCHAR2(255 BYTE),
+	DOSAGENUMBER VARCHAR2(25 BYTE),
+	REMAININGDOSAGES NUMBER,
+	DATEOFDOSAGE DATE,
+	ADMINISTRATIONROUTE VARCHAR2(50 BYTE),
+	NEXTDOSAGE DATE
    )",
 
 "INSURANCE_INFORMATION" => "CREATE TABLE INSURANCE_INFORMATION(	
@@ -135,7 +151,7 @@ foreach ($tables as $tablename => $query) {
         echo "<div>Table '$tablename' Successfully Created.</div>";
     } else {
         $error = oci_error($stid);
-        echo "<div>Error Creating Table '$tablename': " . htmlentities($error['message']) . "</div>";
+        echo "<div style='color: #630000;'>Error Creating Table '$tablename': " . htmlentities($error['message']) . "</div>";
     }
 
     oci_free_statement($stid);
