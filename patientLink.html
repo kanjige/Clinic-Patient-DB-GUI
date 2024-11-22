@@ -81,7 +81,17 @@
         <section>
             <h2>&#x1F4CC Views</h2>
             <h4>Generate All Views</h4>
-            <input type="submit" value="Generate Views">
+            <form action = "views.php" method="POST">
+                <label for="options">Select a View:</label>
+                <select name="viewName" id="viewName">
+                    <option value="Insurance and Bills">Insurance and Bills</option>
+                    <option value="Appointments">Appointments</option>
+                    <option value="Medical Histories">Medical Histories</option>
+                    <option value="Patient Contact Information">Patient Contact Information</option>
+                </select>
+                <br><br>
+                 <input type="submit" value="Generate View">
+            </form>
             <br><br>
         </section>
         <hr class="half">
