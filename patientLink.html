@@ -16,19 +16,40 @@
     <main>
        <section>
             <h2>&#x1F4DD Tables</h2>
-            <h4>Create Tables</h4>
+            <h4>Create Default Tables</h4>
             <input type="submit" value="Create Default Tables">
-           
+            
             <h4>Drop All Tables</h4>
             <input type="submit" value="Drop All Tables">
+            
+            <h4>Create Custom Table</h4>
+                <label>Table Name</label>
+                <br>
+                <input class="field" type="text" name="createName" required>
+                <br><br>
+            <input type="submit" value="Create New Table">
+            
+            <h4>Drop A Table</h4>
+                <label>Table Name</label>
+                <br>
+                <input class="field" type="text" name="dropName" required>
+                <br><br>
+            <input type="submit" value="Drop Table">
+           
             <br><br>
         </section>
         <hr>
 
         <section>
             <h2>&#x1F4C4 Records</h2>
-            <h4>Create Records</h4>
-            <input type="submit" value="Populate Tables">
+            <h4>Create All Records</h4>
+            <input type="submit" value="Populate All Tables">
+            
+            <h4>Create Custom Record</h4>
+            <input type="submit" value="Create Custom Record">
+            
+            <h4>Update Record</h4>
+            <input type="submit" value="Update Record">
            
             <h4>Delete Record</h4>
             <input type="submit" value="Delete Record">
@@ -58,3 +79,4 @@
     </main>
 </body>
 </html>
+
