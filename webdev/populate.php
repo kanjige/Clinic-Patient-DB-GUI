@@ -1,6 +1,12 @@
-<?php
+<?php include ('login.php'); ?>
 
-include("login.php");
+<br>
+<h3 style="text-align: center; color: black max-width: 70%; margin: auto;">log:</h3>
+<br>
+
+<div style="border-style: solid; border-width: 1px; border-color: black; overflow: auto; padding: 10px; font-size: 8px;">
+
+<?php
 
 $populate = [
     "Insert into RPMANOHA.ALLERGIES (ALLERGIESID,TYPE,SEVERITY,ADDITIONALCOMMENTS) values ('AL23456789','Tree Nuts','Mild',null)",
@@ -165,11 +171,15 @@ $populate = [
 foreach ($populate as $query) {
     $stid = oci_parse($conn, $query);
     if (oci_execute($stid)) {
-        echo "Entry " . $query . "added." . "\n";
+        echo "<div>Entry " . $query . "added." . "</div>";
     } else {
         $error = oci_error($stid);
-        echo "Error adding" . $error['message'] . "\n";
+        echo "<div style='color: #630000;'>Error adding" . $error['message'] . "</div>";
     }
 }
 
 oci_close($conn);
+
+?>
+
+</div>
