@@ -11,15 +11,18 @@
     <header>
         <h1>PatientLink</h1>
     </header>
-    <hr>
+    <hr>    
 
     <main>
        <section>
             <h2>&#x1F4DD Tables</h2>
             <h4>Create Tables</h4>
-            <input type="submit" value="Create All Tables">
+            <input type="submit" value="Create All Tables" href="https://webdev.scs.ryerson.ca/~e12wong/create.php">
             
             <h4>Drop All Tables</h4>
+            <form action="drop.php">
+                <input type="submit" value="Drop All Tables">
+            </form>
             <input type="submit" value="Drop All Tables">
             <br><br>
         </section>
@@ -28,13 +31,24 @@
         <section>
             <h2>&#x1F4C4 Records</h2>
             <h4>Create All Records</h4>
-            <input type="submit" value="Populate All Tables">
+            <input type="submit" value="Populate All Tables" href="https://webdev.scs.ryerson.ca/~e12wong/populate.php">
             <br><br>
         </section>
         <hr>
 
         <section>
             <h2>&#x1F4D1 Queries</h2>
+            <h4>Search Individual Records</h4>
+                    <label>Table Name</label>
+                    <br>
+                    <input class="field" type="text" name="tableName" required>
+                    <br>
+                    <label>Attribute</label>
+                    <br>
+                    <input class="field" type="text" name="attribute" required>
+                    <br><br>
+            <input type="submit" value="Search Records">
+            
             <h4>Query</h4>
             <form action = "query.php" method="POST">
                 <label for="options">Select a Query:</label>
@@ -59,7 +73,7 @@
                     <option value="18">18</option>
                 </select>
                 <br><br>
-                 <input type="submit" value="Query">
+                 <input type="submit" value="Query" action="post">
             </form>
         </section>
         <hr>
