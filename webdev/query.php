@@ -25,7 +25,6 @@
         }
 </style>
 
-
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $queryNum = $_POST['queryNum'];
@@ -143,8 +142,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         echo "Error executing query: " . htmlentities($e['message'], ENT_QUOTES);
                         return;
                 }
-
-
 
                 // Display the results in a table
                 echo "<table border='1'>\n";
