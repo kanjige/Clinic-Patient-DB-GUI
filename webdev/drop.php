@@ -1,6 +1,13 @@
-<?php
+<?php include ('login.php'); ?>
 
-include("login.php");
+<br>
+<h3 style="text-align: center; color: black max-width: 70%; margin: auto;">log:</h3>
+<br>
+
+<div style="border-style: solid; border-width: 1px; border-color: black; overflow: auto; padding: 10px; font-size: 12px;">
+
+
+<?php
 
 $drop = [
     "DROP TABLE ALLERGIES CASCADE CONSTRAINTS",
@@ -21,12 +28,16 @@ $drop = [
 
 foreach ($drop as $query) {
     $stid = oci_parse($conn, $query);
-    if (@oci_execute($stid)) {
-        echo "Table dropped: " . explode(' ', $query)[2] . "\n";
+    if (oci_execute($stid)) {
+        echo "<div>Table dropped: " . explode(' ', $query)[2] . "</div>";
     } else {
         $error = oci_error($stid);
-        echo "Error dropping table: " . $error['message'] . "\n";
+        echo "<div style='color: #630000;'>Error dropping table: " . $error['message'] . "</div>";
     }
 }
 
 oci_close($conn);
+
+?>
+
+</div>
