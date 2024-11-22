@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Display the results in a table with headers
-        echo "<table border='1'>\n";
+        echo "<div><table border='1'>\n";
 
         // Fetch and display headers
         $numCols = oci_num_fields($execute);
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             echo "</tr>\n";
         }
-        echo "</table>\n";
+        echo "</table></div>\n";
     } else {
         echo "<h4>Invalid Query</h4>";
     }
