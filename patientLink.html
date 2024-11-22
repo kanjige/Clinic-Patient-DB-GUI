@@ -16,8 +16,8 @@
     <main>
        <section>
             <h2>&#x1F4DD Tables</h2>
-            <h4>Create Default Tables</h4>
-            <input type="submit" value="Create Default Tables">
+            <h4>Create Tables</h4>
+            <input type="submit" value="Create All Tables">
             
             <h4>Drop All Tables</h4>
             <input type="submit" value="Drop All Tables">
@@ -29,17 +29,49 @@
             <h2>&#x1F4C4 Records</h2>
             <h4>Create All Records</h4>
             <input type="submit" value="Populate All Tables">
-           
-            <h4>Delete Records</h4>
-            <input type="submit" value="Delete Record">
             <br><br>
         </section>
         <hr>
 
         <section>
+            <h2>&#x1F4D1 Queries</h2>
+            <h4>Search Individual Records</h4>
+                    <label>Table Name</label>
+                    <br>
+                    <input class="field" type="text" name="tableName" required>
+                    <br>
+                    <label>Attribute</label>
+                    <br>
+                    <input class="field" type="text" name="attribute" required>
+                    <br><br>
+            <input type="submit" value="Search Records">
+            
             <h4>Query</h4>
-            <input type="submit" value="Query">
-            <br><br>
+            <form action = "query.php" method="POST">
+                <label for="options">Select a Query:</label>
+                <select name="queryNum" id="queryNum">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                </select>
+                <br><br>
+                 <input type="submit" value="Query">
+            </form>
         </section>
         <hr>
         
