@@ -11,18 +11,15 @@
     <header>
         <h1>PatientLink</h1>
     </header>
-    <hr>    
+    <hr>
 
     <main>
        <section>
             <h2>&#x1F4DD Tables</h2>
             <h4>Create Tables</h4>
-            <input type="submit" value="Create All Tables" href="https://webdev.scs.ryerson.ca/~e12wong/create.php">
+            <input type="submit" value="Create All Tables">
             
             <h4>Drop All Tables</h4>
-            <form action="drop.php">
-                <input type="submit" value="Drop All Tables">
-            </form>
             <input type="submit" value="Drop All Tables">
             <br><br>
         </section>
@@ -31,25 +28,14 @@
         <section>
             <h2>&#x1F4C4 Records</h2>
             <h4>Create All Records</h4>
-            <input type="submit" value="Populate All Tables" href="https://webdev.scs.ryerson.ca/~e12wong/populate.php">
+            <input type="submit" value="Populate All Tables">
             <br><br>
         </section>
         <hr>
 
         <section>
             <h2>&#x1F4D1 Queries</h2>
-            <h4>Search Individual Records</h4>
-                    <label>Table Name</label>
-                    <br>
-                    <input class="field" type="text" name="tableName" required>
-                    <br>
-                    <label>Attribute</label>
-                    <br>
-                    <input class="field" type="text" name="attribute" required>
-                    <br><br>
-            <input type="submit" value="Search Records">
-            
-            <h4>Query</h4>
+            <h4>Default Queries</h4>
             <form action = "query.php" method="POST">
                 <label for="options">Select a Query:</label>
                 <select name="queryNum" id="queryNum">
@@ -73,8 +59,16 @@
                     <option value="18">18</option>
                 </select>
                 <br><br>
-                 <input type="submit" value="Query" action="post">
+                 <input type="submit" value="Query">
             </form>
+            
+            <h4>Custom Query</h4>
+			<form action="customQuery.php" method="POST">
+				<textarea class="field" name="customQuery" required rows="4" cols="50" placeholder="Enter Custom Query here..."></textarea>
+				<br><br>
+				<input type="submit" value="Custom Query">
+			</form>
+			<br>
         </section>
         <hr>
         
