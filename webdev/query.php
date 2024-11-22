@@ -121,15 +121,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 echo "<style>
                 table {
-                    border: 1px solid; 
-                    border-collapse: collapse;
-                    text-align: center;
-                    margin-left: auto;
-                    margin-right: auto;
+                    
                 }
                 td, th {
-                    padding: 15px;
-                    border: 1px solid;
+                    
                 }
                 tr:nth-child(even) {
                     background-color: #f2f2f2;
@@ -141,11 +136,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               </style>";
 
                 // Display the results in a table
-                echo "<table border='1'>\n";
+                echo "<table border: 1px solid; 
+                    border-collapse: collapse;
+                    text-align: center;
+                    margin-left: auto;
+                    margin-right: auto;>\n";
                 while ($row = oci_fetch_array($execute, OCI_ASSOC + OCI_RETURN_NULLS)) {
                         echo "<tr>\n";
                         foreach ($row as $item) {
-                                echo "<td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                                echo "<td padding: 15px;
+                    border: 1px solid;>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
                         }
                         echo "</tr>\n";
                 }
