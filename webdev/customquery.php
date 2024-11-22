@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         return;
     }
 
-    echo "<table border='1'>\n";
+    echo "<div><table border='1'>\n";
     while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
         echo "<tr>\n";
         foreach ($row as $item) {
@@ -20,5 +20,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         echo "</tr>\n";
     }
-    echo "</table>\n";
+    echo "</table></div>\n";
 }
