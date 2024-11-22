@@ -171,3 +171,4 @@ foreach ($populate as $query) {
 }
 
 mysqli_close($conn);
+?>
