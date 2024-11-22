@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ORDER BY dateofappointment;",
             5 => "SELECT Billing_Information.billinginformationid, Patient_Information.FullName, Patient_Information.PatientID
                     FROM Billing_Information
-                    INNER JOIN patient_information ON 	Billing_Information.BillingInformationID=Patient_Information.BillingInformationID
+                    INNER JOIN patient_information ON Billing_Information.BillingInformationID=Patient_Information.BillingInformationID
                     ORDER BY Patient_Information.dateofbirth;",
             6 => "SELECT billing_history.originalcharge, billing_history.chargename, billing_information.address, billing_history.dateofcharge
                     FROM Billing_History
@@ -96,11 +96,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         WHERE Billing_History.OutstandingPayment = 0);"
         ];
 
-
-
+        if (array_key_exists($queryNum, $queries)) {
+            $query = $queries[$queryNum];
+    
+            // Parse the query
+            $execute = oci_parse($conn, $query);
+            if (!$execute) {
+                $e = oci_error($conn);
+                echo "Error parsing query: " . htmlentities($e['message'], ENT_QUOTES);
+                return;
+            }
+    
+            // Execute the query
+            if (!oci_execute($execute)) {
+                $e = oci_error($execute);
+                echo "Error executing query: " . htmlentities($e['message'], ENT_QUOTES);
+                return;
+            }
+    
+            // Display the results in a table
+            echo "<table border='1'>\n";
+            while ($row = oci_fetch_array($execute, OCI_ASSOC + OCI_RETURN_NULLS)) {
+                echo "<tr>\n";
+                foreach ($row as $item) {
+                    echo "<td>" . ($item !== null ? htmlentities($item, ENT_QUOTES) : "&nbsp;") . "</td>\n";
+                }
+                echo "</tr>\n";
+            }
+            echo "</table>\n";
+    
+        } else {
+            echo "<h4>Invalid Query</h4>";
+        }
     }
 }
 
 // Close connection
-mysqli_close($conn);
+oci_close($conn);
 ?>
