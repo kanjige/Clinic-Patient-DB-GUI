@@ -12,7 +12,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         return;
     }
 
+
     echo "<div><table border='1'>\n";
+
+
+    $numCols = oci_num_fields($stid);
+        echo "<tr>\n";
+        for ($i = 1; $i <= $numCols; $i++) {
+            $colName = oci_field_name($stid, $i);
+            echo "<th>" . htmlentities($colName, ENT_QUOTES) . "</th>\n";
+        }
+        echo "</tr>\n";
+    
     while ($row = oci_fetch_array($stid, OCI_ASSOC + OCI_RETURN_NULLS)) {
         echo "<tr>\n";
         foreach ($row as $item) {
